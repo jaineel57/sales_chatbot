@@ -90,3 +90,96 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+
+- intent: forecasting_sales
+  examples: |
+    -
+
+- intent: forecasting_product_sales
+  examples: |
+    -
+
+- intent: total_sales
+  examples: |
+    -
+
+- intent: change_sales
+  examples: |
+    -
+
+- intent: sales_comparison
+  examples: |
+    -
+
+- intent: clients_info
+  examples: |
+    -
+
+- intent: region_client_info
+  examples: |
+    -
+
+- intent: region_product_info
+  examples: |
+    -
+
+- intent: total_returns
+  examples: |
+    -
+
+- intent: change_returns
+  examples: |
+    -
+
+- intent: returns_comparison
+  examples: |
+    -
+
+- intent: returns_category_amount
+  examples: |
+    -
+
+- intent: returns_category_quantity
+  examples: |
+    -
+
+- intent: returns_customer_amount
+  examples: |
+    -
+
+- intent: returns_customer_quantity
+  examples: |
+    -
+
+- intent: monthly_sales_info
+  examples: |
+    -
+
+- intent: sales_category_amount
+  examples: |
+    -
+
+- intent: sales_category_quantity
+  examples: |
+    -
+
+- intent: yearly_sales_distribution
+  examples: |
+    -
+
+- intent: monthly_sales_distribution
+  examples: |
+    -
+
+- intent: change_sales_monthly
+  examples: |
+    -
+
+- intent: category_sales_info
+  examples: |
+    -
+
+- intent: dealer_sales_info
+  examples: |
+    -
