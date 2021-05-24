@@ -4,6 +4,8 @@ config:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+
 intents:
 - greet:
     use_entities: true
@@ -19,8 +21,62 @@ intents:
     use_entities: true
 - bot_challenge:
     use_entities: true
+- forecasting_sales:
+    use_entities: true
+- forecasting_product_sales:
+    use_entities: true
+- total_sales:
+    use_entities: true
+- change_sales:
+    use_entities: true
+- sales_comparison:
+    use_entities: true
+- clients_info:
+    use_entities: true
+- region_client_info:
+    use_entities: true
+- region_product_info:
+    use_entities: true
+- total_returns:
+    use_entities: true
+- change_returns:
+    use_entities: true
+- returns_comparison:
+    use_entities: true
+- returns_category_amount:
+    use_entities: true
+- returns_category_quantity:
+    use_entities: true
+- returns_customer_amount:
+    use_entities: true
+- returns_customer_quantity:
+    use_entities: true
+- monthly_sales_info:
+    use_entities: true
+- sales_category_amount:
+    use_entities: true
+- sales_category_quantity:
+    use_entities: true
+- yearly_sales_distribution:
+    use_entities: true
+- monthly_sales_distribution:
+    use_entities: true
+- change_sales_monthly:
+    use_entities: true
+- category_sales_info:
+    use_entities: true
+- dealer_sales_info:
+    use_entities: true
+
+
 entities: []
+
+
 slots: {}
+
+
+
+
 responses:
   utter_greet:
   - text: Hey! How are you?
