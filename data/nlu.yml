@@ -156,48 +156,48 @@ nlu:
 
 - intent: returns_category_amount
   examples: |
-    -
+    - What was the return of [productA](category) in terms of amount
 
 - intent: returns_category_quantity
   examples: |
-    -
+    - What was the return of [productA](category) in terms of quantity
 
 - intent: returns_customer_amount
   examples: |
-    -
+    - Which percentage of customers had bought [productA](category) having [maximium](value) return in terms of amount
+    - Which percentage of customers had bought [productA](category) having [minimum](value) return in terms of amount
 
 - intent: returns_customer_quantity
   examples: |
-    -
+    - Which percentage of customers had bought [productA](category) having [maximium](value) return in terms of quantity
+    - Which percentage of customers had bought [productA](category) having [minimum](value) return in terms of quantity
 
 - intent: monthly_sales_info
   examples: |
-    -
+    - What were the sales of [march](month) in year [3](num_year)
 
 - intent: sales_category_amount
   examples: |
-    -
+    - Which product had [maximum](value) sales in terms of amount
+    - Which product had [minimum](value) sales in terms of amount
 
 - intent: sales_category_quantity
   examples: |
-    -
+    - Which product had [maximum](value) sales in terms of quantity
+    - Which product had [minimum](value) sales in terms of quantity
 
-- intent: yearly_sales_distribution
+- intent: yearly_sales_distribution_category
   examples: |
-    -
+    - What was the sales distribution of [productA](category) in year [4](num_year)
 
-- intent: monthly_sales_distribution
+- intent: monthly_sales_distribution_category
   examples: |
-    -
+    - What was the monthly sales distribution of [productA](category) in [march](month) of year [4](num_year)
 
 - intent: change_sales_monthly
   examples: |
-    -
-
-- intent: category_sales_info
-  examples: |
-    -
+    - What was the change in sales from [march](month) to [april](month) in year [4](num_year)
 
 - intent: dealer_sales_info
   examples: |
-    -
+    - Name of the top products sold by a particular [dealerA](dealer_name)
