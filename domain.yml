@@ -57,13 +57,11 @@ intents:
     use_entities: true
 - sales_category_quantity:
     use_entities: true
-- yearly_sales_distribution:
+- yearly_sales_distribution_category:
     use_entities: true
-- monthly_sales_distribution:
+- monthly_sales_distribution_category:
     use_entities: true
 - change_sales_monthly:
-    use_entities: true
-- category_sales_info:
     use_entities: true
 - dealer_sales_info:
     use_entities: true
