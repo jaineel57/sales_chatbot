@@ -67,7 +67,15 @@ intents:
     use_entities: true
 
 
-entities: []
+entities:
+  - num_week
+  - category
+  - num_year
+  - compare_value
+  - num_clients
+  - value
+  - month
+  - dealer_name
 
 
 slots: {}
