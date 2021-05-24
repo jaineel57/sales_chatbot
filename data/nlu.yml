@@ -94,11 +94,11 @@ nlu:
 
 - intent: forecasting_sales
   examples: |
-    -
+    - what will the overall sales be after [2](num_week) weeks
 
 - intent: forecasting_product_sales
   examples: |
-    -
+    - what will the sales of a [productA](category) be after [3](num_week) weeks
 
 - intent: total_sales
   examples: |
@@ -113,23 +113,26 @@ nlu:
 
 - intent: change_sales
   examples: |
-    - 
+    - What was the change in sales bewteen year [1](num_year) and year [3](num_year)
 
 - intent: sales_comparison
   examples: |
-    -
+    - In which year where the sales [maximum](compare_value)
+    - In which year where the sales [minimum](compare_value)
 
 - intent: clients_info
   examples: |
-    -
+    - Name the top [3](num_clients) clients of the company on the basis of sales
 
 - intent: region_client_info
   examples: |
-    -
+    - Which region has clients with [maximum](value) sales
+    - Which region has clients with [minimum](value) sales
 
 - intent: region_product_info
   examples: |
-    -
+    - Which region has products with [maximum](value) sales
+    - Which region has products with [minimum](value) sales
 
 - intent: total_returns
   examples: |
@@ -144,11 +147,12 @@ nlu:
 
 - intent: change_returns
   examples: |
-    -
+    - What was the change in returns bewteen year [1](num_year) and year [3](num_year)
 
 - intent: returns_comparison
   examples: |
-    -
+    - In which year where the returns [maximum](compare_value)
+    - In which year where the returns [minimum](compare_value)
 
 - intent: returns_category_amount
   examples: |
