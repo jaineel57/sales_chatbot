@@ -102,7 +102,14 @@ nlu:
 
 - intent: total_sales
   examples: |
-    -
+    - what are the overall sales of the company
+    - overall sales
+    - total sales
+    - what are the total sales of the company
+    - may i know the overall sales of the company
+    - may i know the total sales of the company
+    - can you tell me the overall sales of the company
+    - can you tell me the total sales of the company
 
 - intent: change_sales
   examples: |
@@ -126,7 +133,14 @@ nlu:
 
 - intent: total_returns
   examples: |
-    -
+    - what are the overall returns of the company
+    - overall returns
+    - total returns
+    - what are the total returns of the company
+    - may i know the overall returns of the company
+    - may i know the total returns of the company
+    - can you tell me the overall returns of the company
+    - can you tell me the total returns of the company
 
 - intent: change_returns
   examples: |
