@@ -188,7 +188,7 @@ nlu:
 
 - intent: yearly_sales_distribution_category
   examples: |
-    - What was the sales distribution of [productA](category) in year [4](num_year)
+    - What was the sales distribution of [productA](category) from year [4](num_year) to year [5](num_year)
 
 - intent: monthly_sales_distribution_category
   examples: |
