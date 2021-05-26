@@ -28,3 +28,12 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: demo path 1
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: total_sales
+    - action: action_total_sales
+    - intent: goodbye
+    - action: utter_goodbye
