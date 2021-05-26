@@ -97,6 +97,8 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-actions: []
+actions:
+  - action_total_sales
+
 forms: {}
 e2e_actions: []
