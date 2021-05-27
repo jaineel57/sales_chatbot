@@ -61,95 +61,95 @@ stories:
     - action: utter_goodbye
 
 
-  - story: path 1
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: total_sales
-      - action: action_total_sales
-      - intent: goodbye
-      - action: utter_goodbye
+- story: path 1
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: total_sales
+    - action: action_total_sales
+    - intent: goodbye
+    - action: utter_goodbye
 
-  - story: path 2
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: change_sales
-      - action: action_change_sales
-      - intent: goodbye
-      - action: utter_goodbye
+- story: path 2
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: change_sales
+    - action: action_change_sales
+    - intent: goodbye
+    - action: utter_goodbye
 
-  - story: path 3
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: clients_info
-      - action: action_clients_info
-      - intent: goodbye
-      - action: utter_goodbye
+- story: path 3
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: clients_info
+    - action: action_clients_info
+    - intent: goodbye
+    - action: utter_goodbye
 
-  - story: path 4
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: max_client_info
-      - action: action_max_clients_info
-      - intent: goodbye
-      - action: utter_goodbye
+- story: path 4
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: max_client_info
+    - action: action_max_clients_info
+    - intent: goodbye
+    - action: utter_goodbye
 
-  - story: path 5
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: max_customer_return_info
-      - action: action_max_customer_return_info
-      - intent: goodbye
-      - action: utter_goodbye
+- story: path 5
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: max_customer_return_info
+    - action: action_max_customer_return_info
+    - intent: goodbye
+    - action: utter_goodbye
 
-  - story: path 6
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: region_product_info
-      - action: action_region_product_info
-      - intent: goodbye
-      - action: utter_goodbye
+- story: path 6
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: region_product_info
+    - action: action_region_product_info
+    - intent: goodbye
+    - action: utter_goodbye
 
-  - story: path 7
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: total_returns
-      - action: action_total_returns
-      - intent: goodbye
-      - action: utter_goodbye
+- story: path 7
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: total_returns
+    - action: action_total_returns
+    - intent: goodbye
+    - action: utter_goodbye
 
-  - story: path 8
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: returns_category_amount
-      - action: action_returns_category_amount
-      - intent: goodbye
-      - action: utter_goodbye
+- story: path 8
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: returns_category_amount
+    - action: action_returns_category_amount
+    - intent: goodbye
+    - action: utter_goodbye
 
-  - story: path 9
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: returns_category_quantity
-      - action: action_returns_category_quantity
-      - intent: goodbye
-      - action: utter_goodbye
+- story: path 9
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: returns_category_quantity
+    - action: action_returns_category_quantity
+    - intent: goodbye
+    - action: utter_goodbye
 
-  - story: path 10
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: yearly_sales_distribution_category
-      - action: action_yearly_sales_distribution_category
-      - intent: goodbye
-      - action: utter_goodbye
+- story: path 10
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: yearly_sales_distribution_category
+    - action: action_yearly_sales_distribution_category
+    - intent: goodbye
+    - action: utter_goodbye
 
 - story: path 11
   steps:
