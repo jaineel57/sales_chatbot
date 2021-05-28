@@ -12,6 +12,9 @@ import queries
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import queries
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
+
 
 
 class ActionHelloWorld(Action):
@@ -187,4 +190,3 @@ class Actiondealer_sales_info(Action):
 
          dispatcher.utter_message(text="run sql query for dealer_sales_info")
 
-         return []

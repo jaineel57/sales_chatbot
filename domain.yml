@@ -29,19 +29,13 @@ intents:
     use_entities: true
 - change_sales:
     use_entities: true
-- sales_comparison:
-    use_entities: true
 - clients_info:
     use_entities: true
-- region_client_info:
+- max_client_info:
     use_entities: true
-- region_product_info:
+- max_customer_return_info:
     use_entities: true
 - total_returns:
-    use_entities: true
-- change_returns:
-    use_entities: true
-- returns_comparison:
     use_entities: true
 - returns_category_amount:
     use_entities: true
@@ -64,6 +58,8 @@ intents:
 - change_sales_monthly:
     use_entities: true
 - dealer_sales_info:
+    use_entities: true
+- region_product_info:
     use_entities: true
 
 
@@ -97,6 +93,20 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-actions: []
+actions:
+  - action_total_sales
+  - action_change_sales
+  - action_clients_info
+  - action_max_clients_info
+  - action_max_customer_return_info
+  - action_region_product_info
+  - action_total_returns
+  - action_returns_category_amount
+  - action_returns_category_quantity
+  - action_yearly_sales_distribution_category
+  - action_monthly_sales_distribution_category
+  - action_dealer_sales_info
+
+
 forms: {}
 e2e_actions: []

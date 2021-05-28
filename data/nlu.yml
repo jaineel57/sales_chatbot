@@ -114,25 +114,20 @@ nlu:
 - intent: change_sales
   examples: |
     - What was the change in sales bewteen year [1](num_year) and year [3](num_year)
-
-- intent: sales_comparison
-  examples: |
-    - In which year where the sales [maximum](compare_value)
-    - In which year where the sales [minimum](compare_value)
+    - change in sales
 
 - intent: clients_info
   examples: |
     - Name the top [3](num_clients) clients of the company on the basis of sales
+    - Information of clients
 
-- intent: region_client_info
+- intent: max_client_info
   examples: |
-    - Which region has clients with [maximum](value) sales
-    - Which region has clients with [minimum](value) sales
+    - what was the max client info
 
-- intent: region_product_info
+- intent: max_customer_return_info
   examples: |
-    - Which region has products with [maximum](value) sales
-    - Which region has products with [minimum](value) sales
+    - what was the max customer return
 
 - intent: total_returns
   examples: |
@@ -145,22 +140,19 @@ nlu:
     - can you tell me the overall returns of the company
     - can you tell me the total returns of the company
 
-- intent: change_returns
-  examples: |
-    - What was the change in returns bewteen year [1](num_year) and year [3](num_year)
-
-- intent: returns_comparison
-  examples: |
-    - In which year where the returns [maximum](compare_value)
-    - In which year where the returns [minimum](compare_value)
-
 - intent: returns_category_amount
   examples: |
     - What was the return of [productA](category) in terms of amount
+    - what was the return for category
 
 - intent: returns_category_quantity
   examples: |
     - What was the return of [productA](category) in terms of quantity
+    - what was the return for particular category of such quantity
+
+- intent: region_product_info
+  examples: |
+    - what was the region product info
 
 - intent: returns_customer_amount
   examples: |
@@ -188,16 +180,15 @@ nlu:
 
 - intent: yearly_sales_distribution_category
   examples: |
-    - What was the sales distribution of [productA](category) in year [4](num_year)
+    - What was the sales distribution from year [4](num_year) to year [5](num_year)
+    - what was the sales distributiob yearly
 
 - intent: monthly_sales_distribution_category
   examples: |
-    - What was the monthly sales distribution of [productA](category) in [march](month) of year [4](num_year)
-
-- intent: change_sales_monthly
-  examples: |
-    - What was the change in sales from [march](month) to [april](month) in year [4](num_year)
+    - What was the monthly sales distribution
+    - what was sales distribution monthly
 
 - intent: dealer_sales_info
   examples: |
     - Name of the top products sold by a particular [dealerA](dealer_name)
+    - what the sales info of dealer
