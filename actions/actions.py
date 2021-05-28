@@ -8,16 +8,13 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 from typing import Any, Text, Dict, List
-<<<<<<< queries
 import queries
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import queries
-=======
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 
-from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
->>>>>>> main
 
 
 class ActionHelloWorld(Action):
@@ -193,8 +190,3 @@ class Actiondealer_sales_info(Action):
 
          dispatcher.utter_message(text="run sql query for dealer_sales_info")
 
-<<<<<<< queries
-         return []
-=======
-         return []
->>>>>>> main
