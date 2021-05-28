@@ -12,7 +12,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import sys
-sys.path.append('/Users/jd/Desktop/sales_chatbot')
+sys.path.append('/Users/jd/Documents/GitHub/sales_chatbot') #/Users/jd/Documents/GitHub/sales_chatbot path for the file
 import queries
 #import queries /Users/jd/Desktop/sales_chatbot/queries.py
 import pandas as pd
