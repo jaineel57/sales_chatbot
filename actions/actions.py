@@ -8,9 +8,14 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 from typing import Any, Text, Dict, List
+
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+import sys
+sys.path.append('/Users/jd/Desktop/sales_chatbot')
 import queries
+#import queries /Users/jd/Desktop/sales_chatbot/queries.py
+import pandas as pd
 
 
 class ActionHelloWorld(Action):
@@ -22,7 +27,9 @@ class ActionHelloWorld(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-         dispatcher.utter_message(text="Hello World!")
+         temp = queries.abc()
+         print(temp)
+         dispatcher.utter_message(temp)
 
          return []
 
