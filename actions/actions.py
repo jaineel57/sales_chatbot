@@ -27,9 +27,12 @@ class ActionHelloWorld(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+
          temp = queries.abc()
-         print(temp)
-         dispatcher.utter_message(temp)
+         final_message = (str(temp[0]) + ',' + str(temp[1]) + ',' + str(temp[2]) + ',' + str(temp[3]) + ',' + str(temp[4]))
+         print(final_message)
+         dispatcher.utter_message(final_message)
+
 
          return []
 
