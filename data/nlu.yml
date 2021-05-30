@@ -215,8 +215,3 @@ nlu:
   examples: |
     - I would like macos laptop
     - OS type macos
-
-- intent: windows
-  examples: |
-    - I would like windows laptop
-    - OS type ms-windows
