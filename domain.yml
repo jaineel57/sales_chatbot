@@ -67,8 +67,6 @@ intents:
     use_entities: true
 - macos:
     use_entities: true
-- windows:
-    use_entities: true
 entities:
 - num_week
 - category
@@ -99,15 +97,11 @@ responses:
       title: Ubuntu
     - payload: /macos
       title: Mac OS
-    - payload: /windows
-      title: MS-Windows
     text: Which operating system would you prefer
   utter_ubuntu:
   - text: The details of the laptop with OS type ubuntu will be mailed to you
   utter_macos:
   - text: The details of the laptop with OS type macos will be mailed to you
-  utter_windows:
-  - text: The details of the laptop with OS type ms-windows will be mailed to you
 actions:
 - action_total_sales
 - action_change_sales
