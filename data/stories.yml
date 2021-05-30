@@ -186,9 +186,17 @@ stories:
       - action: utter_types
       - intent: ubuntu
       - action: utter_ubuntu
+      - intent: goodbye
+      - action: utter_goodbye
+
+
+- story: extra path 1
+  steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: laptop_info
+      - action: utter_types
       - intent: macos
       - action: utter_macos
-      - intent: windows
-      - action: utter_windows
       - intent: goodbye
       - action: utter_goodbye
