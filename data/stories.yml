@@ -168,3 +168,27 @@ stories:
     - action: action_dealer_sales_info
     - intent: goodbye
     - action: utter_goodbye
+
+- story: check path
+  steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: check_database
+      - action: action_hello_world
+      - intent: goodbye
+      - action: utter_goodbye
+
+- story: extra path
+  steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: laptop_info
+      - action: utter_types
+      - intent: ubuntu
+      - action: utter_ubuntu
+      - intent: macos
+      - action: utter_macos
+      - intent: windows
+      - action: utter_windows
+      - intent: goodbye
+      - action: utter_goodbye
