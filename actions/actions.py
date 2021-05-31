@@ -16,7 +16,8 @@ sys.path.append('/Users/jd/Documents/GitHub/sales_chatbot') #/Users/jd/Documents
 import queries
 #import queries /Users/jd/Desktop/sales_chatbot/queries.py
 import pandas as pd
-
+a = queries.convert_json()
+imp = json.loads(a)
 
 class ActionHelloWorld(Action):
 
@@ -27,11 +28,9 @@ class ActionHelloWorld(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
+         check = 5
 
-         temp = queries.abc()
-         final_message = (str(temp[0]) + ',' + str(temp[1]) + ',' + str(temp[2]) + ',' + str(temp[3]) + ',' + str(temp[4]))
-         print(final_message)
-         dispatcher.utter_message(final_message)
+         dispatcher.utter_message(check)
 
 
          return []
@@ -44,8 +43,9 @@ class Actiontotal_sales(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+             val = imp['total_sales']
 
-         dispatcher.utter_message(text="run sql query for total_sales")
+         dispatcher.utter_message(val)
 
          return []
 
