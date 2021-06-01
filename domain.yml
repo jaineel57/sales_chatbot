@@ -19,15 +19,7 @@ intents:
     use_entities: true
 - bot_challenge:
     use_entities: true
-- forecasting_sales:
-    use_entities: true
-- forecasting_product_sales:
-    use_entities: true
 - total_sales:
-    use_entities: true
-- change_sales:
-    use_entities: true
-- clients_info:
     use_entities: true
 - max_client_info:
     use_entities: true
@@ -39,47 +31,21 @@ intents:
     use_entities: true
 - returns_category_quantity:
     use_entities: true
-- returns_customer_amount:
-    use_entities: true
-- returns_customer_quantity:
-    use_entities: true
-- monthly_sales_info:
-    use_entities: true
-- sales_category_amount:
-    use_entities: true
-- sales_category_quantity:
-    use_entities: true
 - yearly_sales_distribution_category:
     use_entities: true
 - monthly_sales_distribution_category:
-    use_entities: true
-- change_sales_monthly:
     use_entities: true
 - dealer_sales_info:
     use_entities: true
 - region_product_info:
     use_entities: true
-- check_database:
+- clients_info:
     use_entities: true
-- laptop_info:
-    use_entities: true
-- ubuntu:
-    use_entities: true
-- macos:
-    use_entities: true
-entities:
-- num_week
-- category
-- num_year
-- compare_value
-- num_clients
-- value
-- month
-- dealer_name
+entities: []
 slots: {}
 responses:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hey! how may I help you?
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
@@ -88,20 +54,9 @@ responses:
   utter_happy:
   - text: Great, carry on!
   utter_goodbye:
-  - text: Bye
+  - text: I hope I have answered all your questions, have a great day goodbye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-  utter_types:
-  - buttons:
-    - payload: /ubuntu
-      title: Ubuntu
-    - payload: /macos
-      title: Mac OS
-    text: Which operating system would you prefer
-  utter_ubuntu:
-  - text: The details of the laptop with OS type ubuntu will be mailed to you
-  utter_macos:
-  - text: The details of the laptop with OS type macos will be mailed to you
 actions:
 - action_total_sales
 - action_change_sales
