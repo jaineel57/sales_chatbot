@@ -4,8 +4,6 @@ config:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
-
 intents:
 - greet:
     use_entities: true
@@ -61,24 +59,24 @@ intents:
     use_entities: true
 - region_product_info:
     use_entities: true
-
-
+- check_database:
+    use_entities: true
+- laptop_info:
+    use_entities: true
+- ubuntu:
+    use_entities: true
+- macos:
+    use_entities: true
 entities:
-  - num_week
-  - category
-  - num_year
-  - compare_value
-  - num_clients
-  - value
-  - month
-  - dealer_name
-
-
+- num_week
+- category
+- num_year
+- compare_value
+- num_clients
+- value
+- month
+- dealer_name
 slots: {}
-
-
-
-
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -93,20 +91,30 @@ responses:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+  utter_types:
+  - buttons:
+    - payload: /ubuntu
+      title: Ubuntu
+    - payload: /macos
+      title: Mac OS
+    text: Which operating system would you prefer
+  utter_ubuntu:
+  - text: The details of the laptop with OS type ubuntu will be mailed to you
+  utter_macos:
+  - text: The details of the laptop with OS type macos will be mailed to you
 actions:
-  - action_total_sales
-  - action_change_sales
-  - action_clients_info
-  - action_max_clients_info
-  - action_max_customer_return_info
-  - action_region_product_info
-  - action_total_returns
-  - action_returns_category_amount
-  - action_returns_category_quantity
-  - action_yearly_sales_distribution_category
-  - action_monthly_sales_distribution_category
-  - action_dealer_sales_info
-
-
+- action_total_sales
+- action_change_sales
+- action_clients_info
+- action_max_clients_info
+- action_max_customer_return_info
+- action_region_product_info
+- action_total_returns
+- action_returns_category_amount
+- action_returns_category_quantity
+- action_yearly_sales_distribution_category
+- action_monthly_sales_distribution_category
+- action_dealer_sales_info
+- action_hello_world
 forms: {}
 e2e_actions: []

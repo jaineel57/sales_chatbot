@@ -192,3 +192,26 @@ nlu:
   examples: |
     - Name of the top products sold by a particular [dealerA](dealer_name)
     - what the sales info of dealer
+
+- intent: check_database
+  examples: |
+    - output
+    - check
+    - dvdrental
+
+
+- intent: laptop_info
+  examples: |
+    - I would like to purchase a laptop
+    - can u help me out in purcahsing a laptop
+    - I want to buy a laptop
+
+- intent: ubuntu
+  examples: |
+    - I would like ubuntu laptop
+    - OS type ubuntu
+
+- intent: macos
+  examples: |
+    - I would like macos laptop
+    - OS type macos

@@ -61,6 +61,7 @@ class Actionchange_sales(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
          val2 = str(imp['change_sales'])
+
          dispatcher.utter_message(val2)
 
          return []
@@ -75,6 +76,7 @@ class Actionclients_info(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
          val3 = str(imp['clients_info'])
+
          dispatcher.utter_message(val3)
 
          return []
@@ -89,6 +91,7 @@ class Actionmax_clients_info(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
          val4 = str(imp['max_client_info'])
+
          dispatcher.utter_message(val4)
 
          return []
@@ -102,6 +105,7 @@ class Actionmax_customer_return_info(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
          val6 = str(imp['max_customer_return_info'])
+
          dispatcher.utter_message(val6)
 
          return []
@@ -114,7 +118,7 @@ class Actionregion_product_info(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-         val7 = str(imp['region_product_info'])
+         val7 = imp['region_product_info']
          dispatcher.utter_message(val7)
 
          return []
