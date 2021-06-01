@@ -11,12 +11,15 @@ from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-import sys
-sys.path.append('/Users/jd/Documents/GitHub/sales_chatbot') #/Users/jd/Documents/GitHub/sales_chatbot path for the file
-import queries
-#import queries /Users/jd/Desktop/sales_chatbot/queries.py
 import pandas as pd
 
+import json
+  
+# Opening JSON file
+f = open('karam_data_dump.json',)
+
+# returns JSON object as a dictionary
+imp = json.load(f)
 
 class ActionHelloWorld(Action):
 
@@ -27,9 +30,10 @@ class ActionHelloWorld(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-         temp = queries.abc()
-         print(temp)
-         dispatcher.utter_message(temp)
+         check = 5
+
+         dispatcher.utter_message(check)
+
 
          return []
 
@@ -42,7 +46,8 @@ class Actiontotal_sales(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-         dispatcher.utter_message(text="run sql query for total_sales")
+         val1 = str(imp['total_sales'])
+         dispatcher.utter_message(val1)
 
          return []
 
@@ -55,8 +60,8 @@ class Actionchange_sales(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         dispatcher.utter_message(text="run sql query for change_sales")
+         val2 = str(imp['change_sales'])
+         dispatcher.utter_message(val2)
 
          return []
 
@@ -69,8 +74,8 @@ class Actionclients_info(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         dispatcher.utter_message(text="run sql query for clients_info")
+         val3 = str(imp['clients_info'])
+         dispatcher.utter_message(val3)
 
          return []
 
@@ -83,8 +88,8 @@ class Actionmax_clients_info(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         dispatcher.utter_message(text="run sql query for max_clients_info")
+         val4 = str(imp['max_client_info'])
+         dispatcher.utter_message(val4)
 
          return []
 
@@ -96,8 +101,8 @@ class Actionmax_customer_return_info(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         dispatcher.utter_message(text="run sql query for max_customer_return_info")
+         val6 = str(imp['max_customer_return_info'])
+         dispatcher.utter_message(val6)
 
          return []
 
@@ -109,8 +114,8 @@ class Actionregion_product_info(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         dispatcher.utter_message(text="run sql query for region_product_info")
+         val7 = str(imp['region_product_info'])
+         dispatcher.utter_message(val7)
 
          return []
 
@@ -122,8 +127,8 @@ class Actiontotal_returns(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         dispatcher.utter_message(text="run sql query for total_returns")
+         val8 = str(imp['total_returns'])
+         dispatcher.utter_message(val8)
 
          return []
 
@@ -136,8 +141,8 @@ class Actionreturns_category_amount(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         dispatcher.utter_message(text="run sql query for returns_category_amount")
+         val9 = str(imp['returns_category_amount'])
+         dispatcher.utter_message(val9)
 
          return []
 
@@ -149,8 +154,8 @@ class Actionreturns_category_quantity(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         dispatcher.utter_message(text="run sql query for returns_category_quantity")
+         val10 = str(imp['returns_category_quantity'])
+         dispatcher.utter_message(val10)
 
          return []
 
@@ -163,8 +168,8 @@ class Actionyearly_sales_distribution_category(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         dispatcher.utter_message(text="run sql query for yearly_sales_distribution_category")
+         val11 = str(imp['yearly_sales_distribution_category'])
+         dispatcher.utter_message(val11)
 
          return []
 
@@ -176,8 +181,8 @@ class Actionmonthly_sales_distribution_category(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         dispatcher.utter_message(text="run sql query for monthly_sales_distribution_category")
+         val12 = str(imp['monthly_sales_distribution_category'])
+         dispatcher.utter_message(val12)
 
          return []
 
@@ -190,7 +195,7 @@ class Actiondealer_sales_info(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-         dispatcher.utter_message(text="run sql query for dealer_sales_info")
+         val13 = str(imp['dealer_sales_info'])
+         dispatcher.utter_message(val13)
 
          return []
