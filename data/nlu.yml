@@ -92,14 +92,6 @@ nlu:
     - am I talking to a human?
 
 
-- intent: forecasting_sales
-  examples: |
-    - what will the overall sales be after [2](num_week) weeks
-
-- intent: forecasting_product_sales
-  examples: |
-    - what will the sales of a [productA](category) be after [3](num_week) weeks
-
 - intent: total_sales
   examples: |
     - what are the overall sales of the company
@@ -111,23 +103,19 @@ nlu:
     - can you tell me the overall sales of the company
     - can you tell me the total sales of the company
 
-- intent: change_sales
-  examples: |
-    - What was the change in sales bewteen year [1](num_year) and year [3](num_year)
-    - change in sales
-
-- intent: clients_info
-  examples: |
-    - Name the top [3](num_clients) clients of the company on the basis of sales
-    - Information of clients
-
 - intent: max_client_info
   examples: |
-    - what was the max client info
+    - name the client who had highest sales
+    - can you name the client with maximum sales
+    - which client was on the top in terms of sales
+    - name the client who had maximium sales
 
 - intent: max_customer_return_info
   examples: |
-    - what was the max customer return
+    - name the custmer who had maximum returns
+    - can you name the customer with maximum returns
+    - which customer was on the top with maimum returns
+    - name the customer who had highest returns
 
 - intent: total_returns
   examples: |
@@ -142,76 +130,46 @@ nlu:
 
 - intent: returns_category_amount
   examples: |
-    - What was the return of [productA](category) in terms of amount
-    - what was the return for category
+    - name the category with maximum returns in terms of amount
+    - name the category with highest returns in terms of amount
+    - can you tell me the category having maximum returns in terms of amount
+    - which category in terms of amount had maximum returns
+    - which category in terms of amount had highest returns
 
 - intent: returns_category_quantity
   examples: |
-    - What was the return of [productA](category) in terms of quantity
-    - what was the return for particular category of such quantity
+    - what are the maximum returns in terms of quantity
+    - what are the highest returns in terms of quantity
+    - can you tell me the maximum returns from the category in terms of quantity
+    - can you tell me the highest returns from the category in terms of quantity
+
 
 - intent: region_product_info
   examples: |
-    - what was the region product info
+    - Name the region with highest sales
+    - Name the region with maximum sales
+    - can you tell me which region had highest sales
+    - can you tell me which region had maximum sales
 
-- intent: returns_customer_amount
-  examples: |
-    - Which percentage of customers had bought [productA](category) having [maximium](value) return in terms of amount
-    - Which percentage of customers had bought [productA](category) having [minimum](value) return in terms of amount
 
-- intent: returns_customer_quantity
-  examples: |
-    - Which percentage of customers had bought [productA](category) having [maximium](value) return in terms of quantity
-    - Which percentage of customers had bought [productA](category) having [minimum](value) return in terms of quantity
-
-- intent: monthly_sales_info
-  examples: |
-    - What were the sales of [march](month) in year [3](num_year)
-
-- intent: sales_category_amount
-  examples: |
-    - Which product had [maximum](value) sales in terms of amount
-    - Which product had [minimum](value) sales in terms of amount
-
-- intent: sales_category_quantity
-  examples: |
-    - Which product had [maximum](value) sales in terms of quantity
-    - Which product had [minimum](value) sales in terms of quantity
 
 - intent: yearly_sales_distribution_category
   examples: |
-    - What was the sales distribution from year [4](num_year) to year [5](num_year)
-    - what was the sales distributiob yearly
+    - what is total yearly sales
+    - amount of total sales done yearly
+    - can you tell me the total yearly sales
+    - can you tell me the amount of total sales done yearly
 
 - intent: monthly_sales_distribution_category
   examples: |
-    - What was the monthly sales distribution
-    - what was sales distribution monthly
+    - what is total monthly sales
+    - amount of total sales done monthly
+    - can you tell me the total monthly sales
+    - can you tell me the amount of total sales done monthly
 
 - intent: dealer_sales_info
   examples: |
-    - Name of the top products sold by a particular [dealerA](dealer_name)
-    - what the sales info of dealer
-
-- intent: check_database
-  examples: |
-    - output
-    - check
-    - dvdrental
-
-
-- intent: laptop_info
-  examples: |
-    - I would like to purchase a laptop
-    - can u help me out in purcahsing a laptop
-    - I want to buy a laptop
-
-- intent: ubuntu
-  examples: |
-    - I would like ubuntu laptop
-    - OS type ubuntu
-
-- intent: macos
-  examples: |
-    - I would like macos laptop
-    - OS type macos
+    - name the dealer with maximum sales of products
+    - name the dealer with highest sales of products
+    - can you tell me which dealer had maximum sales of products
+    - can you tell me which dealer had highest sales of products
