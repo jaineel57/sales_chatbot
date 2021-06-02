@@ -48,7 +48,7 @@ class Actiontotal_sales(Action):
 
          val1 = str(imp['total_sales'])
          print(val1)
-         final_message = "The overall sales of the company are :" +" "+val1
+         final_message = "The overall sales of the company are :" +" "+val1+' '+"INR"
          dispatcher.utter_message(final_message)
 
          return []
@@ -143,7 +143,7 @@ class Actiontotal_returns(Action):
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
          val8 = str(imp['total_returns'])
          print(val8)
-         final_message = "The overall returns of the company :" +" "+val8
+         final_message = "The overall returns of the company :" +" "+val8+' '+"INR"
          dispatcher.utter_message(final_message)
 
          return []
