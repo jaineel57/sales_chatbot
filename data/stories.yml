@@ -34,7 +34,9 @@ stories:
     - intent: greet
     - action: utter_greet
     - intent: total_sales
-    - action: action_total_sales
+    - action: utter_password
+    - intent: password_check
+    - action: action_verification
     - intent: max_client_info
     - action: action_max_clients_info
     - intent: max_customer_return_info
@@ -42,7 +44,9 @@ stories:
     - intent: region_product_info
     - action: action_region_product_info
     - intent: total_returns
-    - action: action_total_returns
+    - action: utter_password
+    - intent: password_check
+    - action: action_verification
     - intent: returns_category_amount
     - action: action_returns_category_amount
     - intent: returns_category_quantity
@@ -62,7 +66,9 @@ stories:
     - intent: greet
     - action: utter_greet
     - intent: total_sales
-    - action: action_total_sales
+    - action: utter_password
+    - intent: password_check
+    - action: action_verification
     - intent: goodbye
     - action: utter_goodbye
 
@@ -107,7 +113,9 @@ stories:
     - intent: greet
     - action: utter_greet
     - intent: total_returns
-    - action: action_total_returns
+    - action: utter_password
+    - intent: password_check
+    - action: action_verification
     - intent: goodbye
     - action: utter_goodbye
 
