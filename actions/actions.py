@@ -12,8 +12,9 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import pandas as pd
-import json
 import decimal
+import json
+
 def currencyInIndiaFormat(n):
 
   d = decimal.Decimal(str(n))
@@ -48,11 +49,11 @@ def currencyInIndiaFormat(n):
     i = i - 1
 
   return res[::-1]
+
 # Opening JSON file
-f = open('/karam_data_dump.json',)
+f = open('karam_data_dump.json',)
 
 # returns JSON object as a dictionary
-#imp = {"max_customer_return_info": "district_food_and_supplies_controller", "total_sales": 97515187, "max_client_info": "reliance_jio_infocomm_limited", "region_product_info": "mro", "total_returns": 5713054.0, "returns_category_amount": "fall_protection", "returns_category_quantity": 93056.0, "yearly_sales_distribution_category": 1612231018.55548, "monthly_sales_distribution_category": 27220400.38, "dealer_sales_info": "PN6000-RIL(WTV-25M)"}
 imp = json.load(f)
 
 class ActionHelloWorld(Action):
@@ -80,8 +81,7 @@ class Actiontotal_sales(Action):
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-         val1 = imp['total_sales']
-         val1 = str(currencyInIndiaFormat(val1))
+         val1 = str(imp['total_sales'])
          print(val1)
          final_message = "The overall sales of the company for this quarter is :" +" "+val1+' '+"INR"
          dispatcher.utter_message(final_message)
@@ -179,8 +179,7 @@ class Actiontotal_returns(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-         val8 = imp['total_returns']
-         val8 = str(currencyInIndiaFormat(val8))
+         val8 = str(imp['total_returns'])
          print(val8)
          final_message = "The overall returns of the company for this quarter is :" +" "+val8+' '+"INR"
          dispatcher.utter_message(final_message)
@@ -263,5 +262,40 @@ class Actiondealer_sales_info(Action):
          print(val13)
          final_message = "The dealer with highest sales of products for this quarter is :" +" "+val13
          dispatcher.utter_message(final_message)
+
+         return []
+
+
+
+class ActionVerification(Action):
+
+     def name(self) -> Text:
+         return "action_verification"
+
+     def run(self, dispatcher: CollectingDispatcher,
+             tracker: Tracker,
+             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+
+         entities = tracker.latest_message['entities']
+         for e in entities:
+             if (e['entity'] == 'password'):
+                 name = e['value']
+             if ( name == '1234'):
+                 ans = imp['total_returns']
+                 ans = str(currencyInIndiaFormat(ans))
+                 print(ans)
+                 final_message = "The overall returns of the company for this quarter is :" +" "+ans+' '+"INR"
+             elif (name == '2345'):
+                 check = imp['total_sales']
+                 check = str(currencyInIndiaFormat(check))
+                 print(check)
+                 final_message = "The overall sales of the company for this quarter is :" +" "+check+' '+"INR"
+             else:
+                 final_message = "Access to this question is denied, please continue with other questions."
+
+
+         dispatcher.utter_message(final_message)
+
 
          return []
