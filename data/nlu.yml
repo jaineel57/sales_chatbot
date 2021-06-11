@@ -173,3 +173,9 @@ nlu:
     - name the dealer with highest sales of products
     - can you tell me which dealer had maximum sales of products
     - can you tell me which dealer had highest sales of products
+
+- intent: password_check
+  examples: |
+    - [1234](password)
+    - [2456](password)
+    - [7890](password)
