@@ -14,41 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 import pandas as pd
 import decimal
 import json
-
-def currencyInIndiaFormat(n):
-
-  d = decimal.Decimal(str(n))
-  if d.as_tuple().exponent < -2:
-    s = str(n)
-  else:
-    s = '{0:.2f}'.format(n)
-  l = len(s)
-  i = l-1
-  res = ''
-  flag = 0
-  k = 0
-  while i>=0:
-    if flag==0:
-      res = res + s[i]
-      if s[i]=='.':
-        flag = 1
-    elif flag==1:
-      k = k + 1
-      res = res + s[i]
-      if k==3 and i-1>=0:
-        res = res + ','
-        flag = 2
-        k = 0
-    else:
-      k = k + 1
-      res = res + s[i]
-      if k==2 and i-1>=0:
-        res = res + ','
-        flag = 2
-        k = 0
-    i = i - 1
-
-  return res[::-1]
+from babel.numbers import format_currency
 
 # Opening JSON file
 f = open('karam_data_dump.json',)
@@ -283,14 +249,14 @@ class ActionVerification(Action):
                  name = e['value']
              if ( name == '1234'):
                  ans = imp['total_returns']
-                 ans = str(currencyInIndiaFormat(ans))
+                 ans = str(format_currency(ans, 'INR', locale='en_IN'))
                  print(ans)
-                 final_message = "The overall returns of the company for this quarter is :" +" "+ans+' '+"INR"
+                 final_message = "The overall returns of the company for this quarter is :" +" "+ans
              elif (name == '2345'):
                  check = imp['total_sales']
-                 check = str(currencyInIndiaFormat(check))
+                 check = str(format_currency(check, 'INR', locale='en_IN'))
                  print(check)
-                 final_message = "The overall sales of the company for this quarter is :" +" "+check+' '+"INR"
+                 final_message = "The overall sales of the company for this quarter is :" +" "+check
              else:
                  final_message = "Access to this question is denied, please continue with other questions."
 
