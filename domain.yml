@@ -41,11 +41,11 @@ intents:
     use_entities: true
 - clients_info:
     use_entities: true
-- password_check:
-    use_entities: true
+#- password_check:
+#    use_entities: true
 
-entities:
-- password
+#entities:
+#- password
 slots: {}
 responses:
   utter_greet:
@@ -61,8 +61,8 @@ responses:
   - text: I hope I have answered all your questions, have a great day goodbye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
-  utter_password:
-  - text: Please enter the verification code to view the answer.
+  #utter_password:
+  #- text: Please enter the verification code to view the answer.
 actions:
 - action_total_sales
 - action_change_sales
@@ -77,6 +77,6 @@ actions:
 - action_monthly_sales_distribution_category
 - action_dealer_sales_info
 - action_hello_world
-- action_verification
+#- action_verification
 forms: {}
 e2e_actions: []
