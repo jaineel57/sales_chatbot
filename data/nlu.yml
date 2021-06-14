@@ -16,7 +16,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +29,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +37,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -49,7 +46,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -66,7 +62,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -83,15 +78,12 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
-
 - intent: total_sales
   examples: |
     - what are the overall sales of the company
@@ -102,21 +94,18 @@ nlu:
     - may i know the total sales of the company
     - can you tell me the overall sales of the company
     - can you tell me the total sales of the company
-
 - intent: max_client_info
   examples: |
     - name the client who had highest sales
     - can you name the client with maximum sales
     - which client was on the top in terms of sales
     - name the client who had maximium sales
-
 - intent: max_customer_return_info
   examples: |
     - name the custmer who had maximum returns
     - can you name the customer with maximum returns
     - which customer was on the top with maimum returns
     - name the customer who had highest returns
-
 - intent: total_returns
   examples: |
     - what are the overall returns of the company
@@ -127,7 +116,6 @@ nlu:
     - may i know the total returns of the company
     - can you tell me the overall returns of the company
     - can you tell me the total returns of the company
-
 - intent: returns_category_amount
   examples: |
     - name the category with maximum returns in terms of amount
@@ -135,47 +123,38 @@ nlu:
     - can you tell me the category having maximum returns in terms of amount
     - which category in terms of amount had maximum returns
     - which category in terms of amount had highest returns
-
 - intent: returns_category_quantity
   examples: |
     - what are the maximum returns in terms of quantity
     - what are the highest returns in terms of quantity
     - can you tell me the maximum returns from the category in terms of quantity
     - can you tell me the highest returns from the category in terms of quantity
-
-
 - intent: region_product_info
   examples: |
     - Name the region with highest sales
     - Name the region with maximum sales
     - can you tell me which region had highest sales
     - can you tell me which region had maximum sales
-
-
-
 - intent: yearly_sales_distribution_category
   examples: |
     - what is total yearly sales
     - amount of total sales done yearly
     - can you tell me the total yearly sales
     - can you tell me the amount of total sales done yearly
-
 - intent: monthly_sales_distribution_category
   examples: |
     - what is total monthly sales
     - amount of total sales done monthly
     - can you tell me the total monthly sales
     - can you tell me the amount of total sales done monthly
-
 - intent: dealer_sales_info
   examples: |
     - name the dealer with maximum sales of products
     - name the dealer with highest sales of products
     - can you tell me which dealer had maximum sales of products
     - can you tell me which dealer had highest sales of products
-
-- intent: password_check
-  examples: |
-    - [1234](password)
-    - [2456](password)
-    - [7890](password)
+# - intent: password_check
+#   examples: |
+#     - [1234](password)
+#     - [2456](password)
+#     - [7890](password)
