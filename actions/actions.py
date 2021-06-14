@@ -1,3 +1,4 @@
+
 # This files contains your custom actions which can be used to run
 # custom Python code.
 #
@@ -17,7 +18,7 @@ import json
 from babel.numbers import format_currency
 
 # Opening JSON file
-f = open('karam_data_dump.json',)
+f = open('./actions/karam_data_dump.json',)
 
 # returns JSON object as a dictionary
 imp = json.load(f)
@@ -46,10 +47,11 @@ class Actiontotal_sales(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+         val1 = imp['total_sales']
 
-         val1 = str(imp['total_sales'])
+         val1 = str(format_currency(val1, 'INR', locale='en_IN'))
          print(val1)
-         final_message = "The overall sales of the company for this quarter is :" +" "+val1+' '+"INR"
+         final_message = "The overall sales of the company for this quarter is :" +" "+val1
          dispatcher.utter_message(final_message)
 
          return []
@@ -145,9 +147,11 @@ class Actiontotal_returns(Action):
      def run(self, dispatcher: CollectingDispatcher,
              tracker: Tracker,
              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-         val8 = str(imp['total_returns'])
-         print(val8)
-         final_message = "The overall returns of the company for this quarter is :" +" "+val8+' '+"INR"
+         val1 = imp['total_returns']
+
+         val1 = str(format_currency(val1, 'INR', locale='en_IN'))         
+         print(val1)
+         final_message = "The overall returns of the company for this quarter is :" +" "+val1
          dispatcher.utter_message(final_message)
 
          return []
@@ -233,35 +237,35 @@ class Actiondealer_sales_info(Action):
 
 
 
-class ActionVerification(Action):
+# class ActionVerification(Action):
 
-     def name(self) -> Text:
-         return "action_verification"
+#      def name(self) -> Text:
+#          return "action_verification"
 
-     def run(self, dispatcher: CollectingDispatcher,
-             tracker: Tracker,
-             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-
-         entities = tracker.latest_message['entities']
-         for e in entities:
-             if (e['entity'] == 'password'):
-                 name = e['value']
-             if ( name == '1234'):
-                 ans = imp['total_returns']
-                 ans = str(format_currency(ans, 'INR', locale='en_IN'))
-                 print(ans)
-                 final_message = "The overall returns of the company for this quarter is :" +" "+ans
-             elif (name == '2345'):
-                 check = imp['total_sales']
-                 check = str(format_currency(check, 'INR', locale='en_IN'))
-                 print(check)
-                 final_message = "The overall sales of the company for this quarter is :" +" "+check
-             else:
-                 final_message = "Access to this question is denied, please continue with other questions."
+#      def run(self, dispatcher: CollectingDispatcher,
+#              tracker: Tracker,
+#              domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
 
-         dispatcher.utter_message(final_message)
+#          entities = tracker.latest_message['entities']
+#          for e in entities:
+#              if (e['entity'] == 'password'):
+#                  name = e['value']
+#              if ( name == '1234'):
+#                  ans = imp['total_returns']
+#                  ans = str(format_currency(ans, 'INR', locale='en_IN'))
+#                  print(ans)
+#                  final_message = "The overall returns of the company for this quarter is :" +" "+ans
+#              elif (name == '2345'):
+#                  check = imp['total_sales']
+#                  check = str(format_currency(check, 'INR', locale='en_IN'))
+#                  print(check)
+#                  final_message = "The overall sales of the company for this quarter is :" +" "+check
+#              else:
+#                  final_message = "Access to this question is denied, please continue with other questions."
 
 
-         return []
+#          dispatcher.utter_message(final_message)
+
+
+#          return []
